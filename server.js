@@ -5,28 +5,28 @@ const jwt = require('jsonwebtoken');
 const config = require('./middleware/config.js');
 
 // Define schemas
-const UserSchema = new mongoose.Schema({
-  username: { type: String, unique: true },
-  email: { type: String, unique: true },
-  password: { type: String },
-  posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }]
-});
+// const UserSchema = new mongoose.Schema({
+//   username: { type: String, unique: true },
+//   email: { type: String, unique: true },
+//   password: { type: String },
+//   posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }]
+// });
 
-const PostSchema = new mongoose.Schema({
-  title: String,
-  content: String,
-  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
-});
+// const PostSchema = new mongoose.Schema({
+//   title: String,
+//   content: String,
+//   author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+//   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
+// });
 
-const CommentSchema = new mongoose.Schema({
-  text: String,
-  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  post: { type: mongoose.Schema.Types.ObjectId, ref: 'Post' }
-});
+// const CommentSchema = new mongoose.Schema({
+//   text: String,
+//   author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+//   post: { type: mongoose.Schema.Types.ObjectId, ref: 'Post' }
+// });
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost/myapp', { useNewUrlParser: true, useUnifiedTopology: true });
+// // Connect to MongoDB
+// mongoose.connect('mongodb://localhost/myapp', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Create Express app
 const app = express();
