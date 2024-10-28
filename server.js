@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-// const config = require('./middleware/config.js');
+const config = require('./middleware/config.js');
 
 // Define schemas
 // const UserSchema = new mongoose.Schema({
